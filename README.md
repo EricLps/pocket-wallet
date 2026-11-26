@@ -6,7 +6,7 @@ Carteira digital com transferências via Pix simulado, desenvolvida para estudo 
 
 - **Back-end:** Java 21, Spring Boot, Spring Data JPA, Flyway
 - **Banco de dados:** PostgreSQL
-- **Front-end:** Angular (em breve)
+- **Front-end:** React (em breve)
 
 ## Status
 
