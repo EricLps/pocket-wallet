@@ -4,9 +4,9 @@ services:
     image: 'postgres:17'
     container_name: 'pocket-wallet-db'
     environment:
-      - 'POSTGRES_DB=pocket-wallet'
-      - 'POSTGRES_USER=wallet123'
-      - 'POSTGRES_PASSWORD=wallet123'
+      - 'POSTGRES_DB=${DB_NAME}'
+      - 'POSTGRES_USER=${DB_USERNAME}'
+      - 'POSTGRES_PASSWORD=${DB_PASSWORD}'
     ports:
       - '5433:5432'
     volumes:
