@@ -1,3 +1,17 @@
 spring:
+  config:
+    import: "optional:file:backend/.env[.properties],optional:file:.env[.properties]"
   application:
     name: backend
+
+  datasource:
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+
+#    Caso nao exista o DB_HOST no .env, o localhost ativa automaticamente. O mesmo vale para o DB_PORT
+    url: jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5433}/${DB_NAME}
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: true
