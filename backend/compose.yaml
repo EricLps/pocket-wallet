@@ -1,0 +1,16 @@
+name: 'pocket-wallet-project'
+services:
+  postgres:
+    image: 'postgres:17'
+    container_name: 'pocket-wallet-db'
+    environment:
+      - 'POSTGRES_DB=pocket-wallet'
+      - 'POSTGRES_USER=wallet123'
+      - 'POSTGRES_PASSWORD=wallet123'
+    ports:
+      - '5433:5432'
+    volumes:
+      - 'postgres-data:/var/lib/postgresql/data'
+
+volumes:
+  postgres-data:
